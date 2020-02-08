@@ -5,4 +5,6 @@
     <string name="tab_div">Divisão</string>
     <string name="tab_mult">Multiplicação</string>
     <string name="tab_about">Sobre</string>
+    <string name="hint_number">Digite um número</string>
+    <string name="btn_sum">Somar</string>
 </resources>
