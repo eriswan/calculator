@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="tab_sum">Soma</string>
+    <string name="tab_sub">Subtração</string>
+    <string name="tab_div">Divisão</string>
+    <string name="tab_mult">Multiplicação</string>
+    <string name="tab_about">Sobre</string>
+</resources>

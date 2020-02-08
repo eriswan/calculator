@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="tab_sum">Sum</string>
+    <string name="tab_sub">Subtraction</string>
+    <string name="tab_div">Division</string>
+    <string name="tab_mult">Multiplication</string>
+    <string name="tab_about">About</string>
 </resources>
