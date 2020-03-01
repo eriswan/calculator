@@ -3,6 +3,7 @@ package com.example.calculator.networking
 import com.example.calculator.model.*
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface Widget {
@@ -25,4 +26,7 @@ interface Widget {
     fun mult(
         @Body multPayload: MultPayload
     ): Call<MultResponse>
+
+    @GET ("widgets/about")
+    fun about(): Call<AboutResponse>
 }
