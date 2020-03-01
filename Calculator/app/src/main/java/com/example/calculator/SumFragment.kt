@@ -9,7 +9,7 @@ import com.example.calculator.model.SumModel
 import com.example.calculator.service.SumService
 import kotlinx.android.synthetic.main.fragment_sum.*
 
-class SumFragment: Fragment() {
+class SumFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

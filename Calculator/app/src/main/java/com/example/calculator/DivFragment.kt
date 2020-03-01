@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.calculator.model.DivModel
-import com.example.calculator.model.SumModel
 import com.example.calculator.service.DivService
-import com.example.calculator.service.SumService
 import kotlinx.android.synthetic.main.fragment_div.*
-import kotlinx.android.synthetic.main.fragment_sum.*
 import kotlinx.android.synthetic.main.fragment_sum.loading
 import kotlinx.android.synthetic.main.fragment_sum.number_a
 import kotlinx.android.synthetic.main.fragment_sum.number_b

@@ -20,4 +20,9 @@ interface Widget {
     fun div(
         @Body divPayload: DivPayload
     ): Call<DivResponse>
+
+    @POST("widgets/mult")
+    fun mult(
+        @Body multPayload: MultPayload
+    ): Call<MultResponse>
 }

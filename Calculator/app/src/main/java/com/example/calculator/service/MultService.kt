@@ -1,19 +1,17 @@
 package com.example.calculator.service
 
-import com.example.calculator.model.SumModel
-import com.example.calculator.model.SumPayload
-import com.example.calculator.model.SumResponse
+import com.example.calculator.model.*
 import com.example.calculator.networking.WidgetProvider
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SumService(
-    private val successCallback: (SumModel) -> Unit,
+class MultService(
+    private val successCallback: (MultModel) -> Unit,
     private val failureCallback: (Throwable) -> Unit
-) : Callback<SumResponse> {
+) : Callback<MultResponse> {
 
-    fun sum(firstNumber: String?, secondNumber: String?) {
+    fun mult(firstNumber: String?, secondNumber: String?) {
         val first: Float? = firstNumber?.toFloatOrNull()
         if (first == null) {
             failureCallback(Exception("First number is not a valid number"))
@@ -24,15 +22,15 @@ class SumService(
             failureCallback(Exception("Second number is not a valid number"))
             return
         }
-        val sumPayload = SumPayload(first, second)
-        WidgetProvider.provide().sum(sumPayload).enqueue(this)
+        val multPayload = MultPayload(first, second)
+        WidgetProvider.provide().mult(multPayload).enqueue(this)
     }
 
-    override fun onFailure(call: Call<SumResponse>, t: Throwable) {
+    override fun onFailure(call: Call<MultResponse>, t: Throwable) {
         failureCallback(t)
     }
 
-    override fun onResponse(call: Call<SumResponse>, response: Response<SumResponse>) {
+    override fun onResponse(call: Call<MultResponse>, response: Response<MultResponse>) {
         val body = response.body()
 
         if (body == null) {
@@ -46,7 +44,8 @@ class SumService(
             return
         }
 
-        val sumModel = SumModel(resultNumber)
-        successCallback(sumModel)
+        val multModel = MultModel(resultNumber)
+        successCallback(multModel)
     }
 }
+
