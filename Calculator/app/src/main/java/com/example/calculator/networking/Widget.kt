@@ -1,9 +1,6 @@
 package com.example.calculator.networking
 
-import com.example.calculator.model.SubPayload
-import com.example.calculator.model.SubResponse
-import com.example.calculator.model.SumPayload
-import com.example.calculator.model.SumResponse
+import com.example.calculator.model.*
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -18,4 +15,9 @@ interface Widget {
     fun sub(
         @Body subPayload: SubPayload
     ): Call<SubResponse>
+
+    @POST("widgets/div")
+    fun div(
+        @Body divPayload: DivPayload
+    ): Call<DivResponse>
 }
